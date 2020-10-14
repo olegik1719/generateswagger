@@ -30,15 +30,12 @@
                         <configuration>
                             <inputSpec>http://localhost:8080/v3/api-docs/</inputSpec>
                             <output>target/generated-sources</output>
-                            <language>spring</language>
+                            <language>jaxrs-cxf</language>
                             <generateApis>false</generateApis>
                             <modelPackage>com.github.olegik1719.generateswagger.model</modelPackage>
-                            <apiPackage>com.kj</apiPackage>
                             <configOptions>
                                 <sourceFolder>swagger</sourceFolder>
-                                <library>spring-mvc</library>
                                 <interfaceOnly>true</interfaceOnly>
-                                <useBeanValidation>true</useBeanValidation>
                                 <dateLibrary>java8</dateLibrary>
                                 <java8>true</java8>
                             </configOptions>
@@ -54,12 +51,8 @@
             <artifactId>jackson-databind</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.swagger</groupId>
+            <groupId>io.swagger.core.v3</groupId>
             <artifactId>swagger-annotations</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
